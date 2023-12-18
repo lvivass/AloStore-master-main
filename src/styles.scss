@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+//Variables de colores
+
+:root {
+
+  //Colores
+    --primary-color: #008080; /* Color primario */
+    --secondary-color: #C9C9C9; /* Color secundario */
+    --success-color: #17986B; /* Color de éxito */
+    --danger-color: #dc3545; /* Color de peligro */
+    --warning-color: #ffc107; /* Color de advertencia */
+    --warning-color2: #D3EE05; /* Color de advertencia */
+    --info-color: #242F66; /* Color de información */
+
+    --light-color: #f8f9fa; /* Color claro */
+    --ligth-color2:#C9C9C9; /* Color claro */
+    --dark-color: #2b2b2b; /* Color oscuro */
+
+    //background
+    --bg-color:#CACACB;
+    --bg-color2: #D3EE05;
+ 
+   
+    //Colores para los textos
+    --text-normal-color: #4c4c4d;
+    --text-muted-color: #adb5bd;
+    --text-subtitulo-color: #008080;
+
+    //Imagenes para fondos o colocar en el css
+    --imagen-fondo: url('./assets/imagenes/bg.png'); /* Imagen de fondo */
+    --icono-instagram:  url('./assets/logos/instagram.png'); // Logo de instagram
+    --icono-x:  url('./assets/logos/x.png'); // Logo de twiter / x
+    --icono-facebook:  url('./assets/logos/facebook.png'); // Logo de facebook
+    --icono-linkedin:  url('./assets/logos/linkedin.png'); // Logo de Linkeding
+
+   
+
+
+  }

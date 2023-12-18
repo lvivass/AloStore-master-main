@@ -1,0 +1,57 @@
+<div class="container pt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="caja">
+          <h2 class="titulo">Bienvenido</h2>
+          <p class="texto">Nos complace que hayas decidido confiar en nosotros y en nuestro servicio. 
+            Aquí podrás efectuar tu registro.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="caja">
+          <div class="form-container">
+            <form class="form">
+              <p class="title">Registro</p>
+              <p class="message">Regístrese ahora y obtenga acceso completo a nuestra app</p>
+              <div class="flex">
+                <label>
+                  <input required="" placeholder="" type="text" class="input">
+                  <span>Primer nombre</span>
+                </label>
+                <label>
+                  <input required="" placeholder="" type="text" class="input">
+                  <span>Segundo nombre</span>
+                </label>
+              </div>  
+              <label>
+                <input required="" placeholder="" type="email" class="input">
+                <span>Email</span>
+              </label> 
+              <label>
+                <div class="password-container">
+                  <input required="" placeholder="" type="{{showPassword ? 'text' : 'password'}}" class="input" [(ngModel)]="password">
+                  <span>Contraseña</span>
+                  <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
+                   
+                  </button>
+                </div>
+              </label>
+              <label>
+                <!-- <input required="" placeholder="" type="password" class="input">
+                <span>Confirme su contraseña</span> -->
+                <div class="password-container">
+                  <input type="password" required="" placeholder="" type="{{showPassword ? 'text' : 'password'}}" class="input" [(ngModel)]="password">
+                  <span>Contraseña</span>
+                  <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
+                  </button>
+                </div>
+              </label>
+              <button class="submit">Enviar</button>
+              <p class="signin">¿Ya tienes una cuenta? <br> <a [routerLink]="['/']" >Iniciar sesión</a> </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

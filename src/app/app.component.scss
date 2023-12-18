@@ -1,0 +1,17 @@
+.fondo{
+    background-image: var(--imagen-fondo); /* Aplicar la imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100vw auto;
+    height: 100vh;
+  
+  }
+
+  @media (max-width: 1800px) {
+    .fondo {
+      background-size: cover;
+      background-position: left bottom;
+    }
+  }
