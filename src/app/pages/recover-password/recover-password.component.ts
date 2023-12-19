@@ -11,7 +11,7 @@ export class RecoverPasswordComponent  {
   ngOnInit() {
     Swal.fire({
       title: 'Hola',
-      text: 'Bienvenido a nuestra página. Para continuar, por favor regístrate o inicia sesión.',
+      text: 'Te informamos que para realizar la recuperacion de contraseña debes estar registrado.',
       icon: 'info',
       confirmButtonText: 'Aceptar'
     });
