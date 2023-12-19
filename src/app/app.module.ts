@@ -1,11 +1,10 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-
-
-
-
+import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
+
+//Componentes
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -41,7 +40,7 @@ import { RecoverPasswordComponent } from './pages/recover-password/recover-passw
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    
+    MatDialogModule,
     AppRoutingModule
   ],
   providers: [],
