@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RecoverPasswordComponent } from './recover-password.component';
 import { ValidatePasswordComponent } from './validate-password/validate-password.component';
 import { RecoverpasswordGuard } from 'src/app/guards/recoverPassword/recoverpassword.guard';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
  const routes: Routes = [
 
@@ -11,6 +12,7 @@ import { RecoverpasswordGuard } from 'src/app/guards/recoverPassword/recoverpass
     // { path: 'validate-password', component: ValidatePasswordComponent,canActivate:[RecoverpasswordGuard]},
   
    { path: 'validate-password', component: ValidatePasswordComponent },
+   { path: 'change-password', component: ChangePasswordComponent },
   
  ];
 
