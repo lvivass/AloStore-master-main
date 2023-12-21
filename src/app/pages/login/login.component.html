@@ -1,44 +1,72 @@
 <div class="container pt-5">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="caja">
-          <h2 class="titulo">Bienvenido</h2>
-          <p class="texto">Este es un ejemplo de texto a la izquierda. Puede contener la información que desees.</p>
-        </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="caja">
+        <h2 class="titulo">Bienvenido</h2>
+        <p class="texto">
+          Este es un ejemplo de texto a la izquierda. Puede contener la
+          información que desees.
+        </p>
       </div>
-      <div class="col-md-6">
-        <div class="caja">
-          <div class="form-container">
-            <p class="title">Iniciar sesión</p>
-            <form class="form">
-              <input type="email" class="input" placeholder="Correo">
-              <div class="password-container">
-                <input class="input" placeholder="Ingrese su contraseña"
+    </div>
+    <div class="col-md-6">
+      <div class="caja">
+        <div class="form-container">
+          <!--FORMULARIO-->
+          <p class="title">Iniciar sesión</p>
+          <form class="form" [formGroup]="forms" (ngSubmit)="salveInf()">
+            <input
+              type="email"
+              formControlName="email"
+              [class.is-invalid]="emailNoValido"
+              class="input"
+              placeholder="Correo"
+              required
+            />
+            <small *ngIf="emailNoValido" class="mensajeError"
+              >Ingrese un correo valido</small
+            >
+            <!--Password-->
+            <div class="password-container">
+              <input
+                class="input"
+                formControlName="password"
+                [class.is-invalid]="passwordNoValido"
+                placeholder="Ingrese su contraseña"
                 type="password"
                 id="password"
-               name="password"
-               appTogglePassword
-               required>
-                <div class="password-toggle" (click)="onTogglePassword('password')">
-                  <i class="fa fa-eye-slash"></i>
-                </div>
-                
+                name="password"
+                maxlength="10"
+                appTogglePassword
+                required
+              />
+              <br />
+              <small *ngIf="passwordNoValido" class="mensajeError"
+                >Debe contener minímo de 8 caracteres</small
+              >
+              <div
+                class="password-toggle"
+                (click)="onTogglePassword('password')"
+              >
+                <i class="fa fa-eye-slash"></i>
               </div>
-              <p class="page-link">
-                <a  [routerLink]="['/recover-password']" ><span class="page-link-label">¿Olvido su contraseña?</span></a>
-              </p>
-              <button class="form-btn">Ingresar</button>
-            </form>
-            
-            <p class="sign-up-label">
-                ¿No tienes una cuenta? <a href="register"><span class="sign-up-link">
-                  Registrate
-                </span>
-              </a>
+            </div>
+            <p class="page-link">
+              <a [routerLink]="['/recover-password']"
+                ><span class="page-link-label">¿Olvido su contraseña?</span></a
+              >
             </p>
-          </div>
+            <button type="submit" class="form-btn"  [disabled]="!isFormValid()">Ingresar</button>
+          </form>
+
+          <p class="sign-up-label">
+            ¿No tienes una cuenta?
+            <a href="register"
+              ><span class="sign-up-link"> Registrate </span>
+            </a>
+          </p>
         </div>
       </div>
     </div>
   </div>
-  
+</div>
