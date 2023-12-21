@@ -10,11 +10,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 })
 export class ChangePasswordComponent {
 
-  isLook1 = false;
-  isLook2 = false;
-  isLook3 = false;
-  faEye = faEye;
-  faEyeSlash = faEyeSlash;
+ 
 
   //Logica para ver la contraseña en el input
   constructor(private el: ElementRef) {}
@@ -30,20 +26,35 @@ export class ChangePasswordComponent {
   }
 
 
-  @HostListener('click')
-  toggle() {
-    const passwordInput = this.el.nativeElement.previousElementSibling;
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    const icon = this.el.nativeElement.querySelector('i');
-    if (type === 'text') {
-      icon.classList.remove('fa-eye-slash');
-      icon.classList.add('fa-eye');
-    } else {
+  // @HostListener('click')
+  // toggle() {
+  //   const passwordInput = this.el.nativeElement.previousElementSibling;
+  //   const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  //   passwordInput.setAttribute('type', type);
+  //   const icon = this.el.nativeElement.querySelector('i');
+  //   if (type === 'text') {
+  //     icon.classList.remove('fa-eye-slash');
+  //     icon.classList.add('fa-eye');
+  //   } else {
+  //     icon.classList.remove('fa-eye');
+  //     icon.classList.add('fa-eye-slash');
+  //   }
+  // }
+  
+
+ 
+
+  @HostListener('input') onInput() {
+    const input = this.el.nativeElement;
+    const icon = input.nextElementSibling;
+
+    if (input.value === '') {
       icon.classList.remove('fa-eye');
       icon.classList.add('fa-eye-slash');
+    } else {
+      icon.classList.remove('fa-eye-slash');
+      icon.classList.add('fa-eye');
     }
   }
-  
   
 }

@@ -9,18 +9,25 @@
       <div class="col-md-6">
         <div class="caja">
           <div class="form-container">
-            <p class="title">Login</p>
+            <p class="title">Iniciar sesión</p>
             <form class="form">
-              <input type="email" class="input" placeholder="Email">
+              <input type="email" class="input" placeholder="Correo">
               <div class="password-container">
-                <input style="width: 100%;" required="" placeholder="Ingrese su contraseña" type="{{showPassword ? 'text' : 'password'}}" class="input" [(ngModel)]="password">
-                <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
-                </button>
+                <input class="input" placeholder="Ingrese su contraseña"
+                type="password"
+                id="password"
+               name="password"
+               appTogglePassword
+               required>
+                <div class="password-toggle" (click)="onTogglePassword('password')">
+                  <i class="fa fa-eye-slash"></i>
+                </div>
+                
               </div>
               <p class="page-link">
                 <a  [routerLink]="['/recover-password']" ><span class="page-link-label">¿Olvido su contraseña?</span></a>
               </p>
-              <button class="form-btn">Login</button>
+              <button class="form-btn">Ingresar</button>
             </form>
             
             <p class="sign-up-label">

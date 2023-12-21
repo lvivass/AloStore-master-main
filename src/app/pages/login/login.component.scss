@@ -1,17 +1,11 @@
  
-.titulo {
+  @import url('https://cdn.js/fontawesome.com/sass/font-awesome.css');
+  @import url('https://cdn.js/fontawesome.com/sass/brands.css');
+
+   .titulo {
     color: var(--text-normal-color); 
     }
    
-   //Media query para que el parrafo se oculte en ese tamaño
-   @media (max-width: 450px) {
-      .texto  {
-        display: none;
-      }
-    }
-    
-    
-  
     //Estilos del formulario
     .form-container {
       width: 340px;
@@ -167,7 +161,7 @@
       }
     }
 
-     //Boton de ver contraseña
+  //Boton de ver contraseña
   .password-container {
     position: relative;
   }
@@ -177,22 +171,33 @@
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-  //  background: red;
-    border: #070707 solid 2px;
-    border-radius: 50%;
-    height: 25%;
     width: 5%;
-   // border: none;
     cursor: pointer;
     
   }
-  
-  .password-toggle i {
-    font-size: 1.2rem;
+
+     //Media query para que el parrafo se oculte en ese tamaño
+     @media (max-width: 450px) {
+      .texto  {
+        display: none;
+      }
+    }
+
+     @media (max-width: 766px) {
+    .form-container {
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
-  .password-toggle:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  /* Ajustes para pantallas de 762px */
+  @media (max-width: 762px) {
+  .input {
+    width: calc(100% - 43px); /* Resta el ancho del botón de ojo y un poco de espacio adicional */
   }
+
+  .password-toggle {
+    right: 55px; /* Ajusta el espacio a la derecha del botón de ojo */
+  }
+}
