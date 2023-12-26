@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-validate-password',
@@ -6,18 +7,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./validate-password.component.scss']
 })
 export class ValidatePasswordComponent {
+ 
+  //Variables
+  timeLeft: number = 120; // 2 minutos en segundos
 
-  tiempoRestante: number = 120; // 2 minutos en segundos
+  constructor() { }
 
   ngOnInit() {
-    const intervalo = setInterval(() => {
-      if (this.tiempoRestante > 0) {
-        this.tiempoRestante--;
+    const interval = setInterval(() => {
+      if (this.timeLeft > 0) {
+        this.timeLeft--;
       } else {
-        clearInterval(intervalo);
-        // Aquí puedes manejar la lógica de expiración del código
+        clearInterval(interval);
+        Swal.fire({
+          title: "¿Te quedaste sin tiempo?",
+          text: "Oprime el botón de reenviar y solicita tu código nuevamente",
+          icon: "question"
+        });
+        
       }
     }, 1000); // Actualizar cada segundo
   }
 
+  restartTimer() {
+    this.timeLeft = 120;
+  }
 }
