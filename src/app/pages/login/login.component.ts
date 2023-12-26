@@ -75,8 +75,13 @@ export class LoginComponent implements OnInit {
 
   salveInf() {
     // Aquí puedes guardar la información del formulario o realizar otras acciones necesarias
-    console.log(this.forms.value); // Muestra los valores del formulario en la consola
-    console.log('Información guardada');
+    console.log(this.forms.value);
+     //si el formulario es inválido, el método marca como tocados todos los controles del formulario que no son válidos, para que se muestren los mensajes de error correspondientes en la vista.
+     if( this.forms.invalid){
+       return Object.values(this.forms.controls).forEach(control =>{
+         control.markAsTouched();
+       })
+     }
   }
 
   // Agrega un método para verificar si el formulario es válido

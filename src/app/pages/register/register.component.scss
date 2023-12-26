@@ -145,14 +145,17 @@
   
   .password-toggle {
     position: absolute;
-    top: 50%;
+    top: 28px;
     right: 10px;
-    transform: translateY(-50%);
+    transform: translateY(-75%);
     border: none;
-  
    // border: none;
     cursor: pointer;
-    
   }
+
+.mensajeError{
+  color: var(--danger-color);
+  font-weight: bold;
+}
   
  

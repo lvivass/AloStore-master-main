@@ -13,44 +13,79 @@
       <div class="caja">
         <div class="form-container">
           <!--FORMULARIO-->
-          <form class="form">
+          <form class="form" [formGroup]="forms" (ngSubmit)="salveInformation()">
             <p class="title">Registro</p>
             <p class="message">
               Regístrese ahora y obtenga acceso completo a nuestra app
             </p>
             <div class="flex">
               <label>
-                <input required="" placeholder="" type="text" class="input" />
-                <span>Primer nombre</span>
+                <input 
+                required 
+                (keypress)="omitSpecialChar($event)"
+                formControlName="name"
+                [class.is-invalid]="nameNoValido"
+                placeholder="" 
+                type="text" 
+                class="input" />
+                <span>Nombre</span>
+                <small *ngIf="nameNoValido"  class="mensajeError"
+                >*Ingrese su nombre</small>
               </label>
               <label>
-                <input required="" placeholder="" type="text" class="input" />
-                <span>Segundo nombre</span>
+                <input 
+                required
+                formControlName="lastname"
+                (keypress)="omitSpecialChar($event)"
+                [class.is-invalid]="lastnameNoValido"
+                placeholder="" 
+                type="text" 
+                class="input" />
+                <span>Apellido</span>
+                <small *ngIf="lastnameNoValido"  class="mensajeError"
+                >*Ingrese su apellido</small>
               </label>
             </div>
             <label>
-              <input required="" placeholder="" type="Correo" class="input" />
-              <span>Email</span>
+              <input 
+              required
+              formControlName="email"
+              [class.is-invalid]="emailNoValido"
+              placeholder="Ingrese su correo" 
+              type="Correo" 
+              class="input" />
+             
+              <small *ngIf="emailNoValido"  class="mensajeError">
+                *Ingrese un correo valido</small
+            >
             </label>
             <label>
               <div class="password-container">
                 <input
                   required
-                  placeholder=""
-                  type="{{ showPassword ? 'text' : 'password' }}"
+                  name="password1"
+                  id="password1"
+                  minlength="8"
+                  maxlength="10"
+                  formControlName="password1"
+                  [class.is-invalid]="password1NoValido"
+                  type="{{ showPassword1 ? 'text' : 'password' }}"
                   class="input"
-                  [(ngModel)]="password"
+                  [(ngModel)]="password1"
                   appPasswordVisibility
                 />
-                <span>Ingresa tu Contraseña</span>
+               
+                <small *ngIf="password1NoValido"  class="mensajeError">
+                  *La contraseña debe contener minimo 8 caracteres</small
+              >
                 <button
                   type="button"
                   class="password-toggle"
-                  (click)="togglePasswordVisibility()"
+                  (click)="togglePasswordVisibility('password1')"
                 >
                   <i
                     class="fa"
-                    [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+                    [ngClass]="showPassword1 ? 'fa-eye' : 'fa-eye-slash'"
                   ></i>
                 </button>
               </div>
@@ -59,26 +94,31 @@
               <div class="password-container">
                 <input
                   required
+                  minlength="8"
+                  maxlength="10"
+                  formControlName="password2"
+                  [class.is-invalid]="password2NoValido"
                   placeholder=""
-                  type="{{ showPassword ? 'text' : 'password' }}"
+                  type="{{ showPassword2 ? 'text' : 'password' }}"
                   class="input"
-                  [(ngModel)]="password"
+                  [(ngModel)]="password2"
                   appPasswordVisibility
                 />
-                <span>Confirma tu contraseña</span>
+                <small *ngIf="password2NoValido"  class="mensajeError">
+                  *Ambas contraseñas debe coincidir</small>
                 <button
                   type="button"
                   class="password-toggle"
-                  (click)="togglePasswordVisibility()"
+                  (click)="togglePasswordVisibility('password2')"
                 >
                   <i
                     class="fa"
-                    [ngClass]="showPassword ? 'fa-eye' : 'fa-eye-slash'"
+                    [ngClass]="showPassword2 ? 'fa-eye' : 'fa-eye-slash'"
                   ></i>
                 </button>
               </div>
             </label>
-            <button class="submit">Enviar</button>
+            <button type="submit" class="submit">Enviar</button>
             <p class="signin">
               ¿Ya tienes una cuenta? <br />
               <a [routerLink]="['/']">Iniciar sesión</a>
