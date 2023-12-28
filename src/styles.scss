@@ -38,7 +38,100 @@
     --icono-facebook:  url('./assets/logos/facebook.png'); // Logo de facebook
     --icono-linkedin:  url('./assets/logos/linkedin.png'); // Logo de Linkeding
 
-   
+   //ESTILO DEL FONDO ANIMADO
+   //Aqui comienza el fondo animado
+
+  //Clases de animaciones
+  .backgroundDriver{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .backgroundDriver:before{
+    content: "";
+    opacity: 0;
+  }
+
+  .building{
+    height: 394px;
+    background-image: url(./assets/imagenes/edificios.png);
+    background-size: 900px auto;
+    background-position: 900px auto;
+    animation: run 35s infinite linear; //Velocidad del edificio
+  }
+
+  //La calle
+  .street{
+    background-color: rgb(203,203,203);
+    background-color: linear-gradient(0deg, rgba(203,203,203,1) 0%, rgba(156,156,156,1) 100%);
+    height: 240px;
+    background-image: url(./assets/imagenes/calle.png);
+    background-size: 300px auto;
+    background-position: 0px auto;
+    animation: run2 0.7s infinite linear; //Velocidad de la calle
+  }
+ 
+  //Motorizado
+  .driver{
+    width: 340px;
+    position: absolute;
+    bottom: 13%;
+    left: 16px;
+    
+  }
+
+
+ //Da las animaciones
+ @keyframes run {
+  from {
+  background-position: 900px 0px;
+  }
+  to {
+  background-position: 0px 0px;
+  }
+}
+
+@keyframes run2 {
+  from {
+  background-position: 0px 0px;
+  }
+  to {
+  background-position: -300px 0px;
+  }
+}
+
+
+//Querys
+  @media (max-width: 1800px) {
+    .fondo {
+      background-size: cover;
+      background-position: left bottom;
+    }
+  }
+ 
+  //Animacion del motorizado
+  @media (max-width: 768px) {
+    .driver{
+      left: 768px;
+      transition-duration: 2s;
+    }
+  }
+
+  //Hace que el motorizado regrese
+  @media (min-width: 768px) {
+    .driver{
+      left: 18px;
+      transition-duration: 2s;
+    }
+  }
+
+  
 
 
   }

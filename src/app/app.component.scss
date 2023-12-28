@@ -55,6 +55,8 @@
     
   }
 
+  
+
  //Da las animaciones
  @keyframes run {
   from {
@@ -82,3 +84,21 @@
       background-position: left bottom;
     }
   }
+ 
+  //Animacion del motorizado
+  @media (max-width: 768px) {
+    .driver{
+      left: 768px;
+      transition-duration: 2s;
+    }
+  }
+
+  //Hace que el motorizado regrese
+  @media (min-width: 768px) {
+    .driver{
+      left: 18px;
+      transition-duration: 2s;
+    }
+  }
+
+  
