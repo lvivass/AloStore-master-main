@@ -9,7 +9,7 @@ import Swal from 'sweetalert2';
 export class ValidatePasswordComponent {
  
   //Variables
-  timeLeft: number = 120; // 2 minutos en segundos
+  timeLeft: number = 20; // 2 minutos en segundos
 
   constructor() { }
 
@@ -30,6 +30,6 @@ export class ValidatePasswordComponent {
   }
 
   restartTimer() {
-    this.timeLeft = 120;
+    this.timeLeft = 20;
   }
 }

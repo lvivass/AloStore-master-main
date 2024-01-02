@@ -1,48 +1,71 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-8">
-      <img src="../../../assets/logos/AloStore.svg" alt="imagen 1" class="img-fluid">
-    </div>
-    <div style="align-items: center;" class="col-md-4">
-      <p class="pt-2">Ultima conexión pruebaaaaa</p>
-    </div>
-  </div>
-</div>
-<nav style="position: sticky; top: 0; width: 100%; z-index: 1030;" class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="d-flex " role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success  me-2" type="submit">Search</button>
-        <button class="btn btn-outline-success " type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-<div class="container">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed aliquid pariatur error itaque ab voluptates exercitationem doloremque, nisi dolorem magni commodi magnam laboriosam illo, temporibus eaque cumque suscipit! Esse, veritatis?</p>
+<app-main-menu></app-main-menu>
+<app-modal-home></app-modal-home> 
 
-</div>
+
+<div style="padding-top: 12%;" class="container text-center">
+    <div class="row justify-content-cente">
+      <div style="border: 1px solid red; margin-left: 1%; padding: 2px;" 
+      class="col-sm-7 ">
+        <div class="container">
+            <article id="slider">
+                <input checked type='radio' name='slider' id='slide1'/>
+                <input type='radio' name='slider' id='slide2'/>
+                <input type='radio' name='slider' id='slide3'/>
+                <input type='radio' name='slider' id='slide4'/>
+                <input type='radio' name='slider' id='slide5'/>
+                <div id="slides">
+                    <div id="container">
+                        <div class="inner">
+                            <article>
+                            <img src="http://placehold.it/942X400"/>
+                            </article>
+                            <article>
+                            <div class='caption'>
+                              
+                            </div>
+                            <img src="https://0.s3.envato.com/files/84450220/img/Dummy1-942X400.jpg"/>
+                            </article>
+                            <article>
+                            <div class='caption'>
+                                <bar>A Small Elephant <a href="#">read more</a></bar>
+                            </div>
+                            <img src="https://0.s3.envato.com/files/84450220/img/Dummy2-942X400.jpg"/>
+                            </article>
+                            <article>
+                            <div class='caption'>
+                                <bar>A Yellow Flower <a href="#">read more</a></bar>
+                            </div>
+                            <img src="https://0.s3.envato.com/files/84450220/img/Dummy3-942X400.jpg"/>
+                            </article>
+                            <article>
+                            <div class='caption'>
+                                <bar>A Pink Flower</bar>
+                            </div>
+                            <img src="https://0.s3.envato.com/files/84450220/img/Dummy4-942X400.jpg"/>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div id="commands">
+                    <label for='slide1'></label>
+                    <label for='slide2'></label>
+                    <label for='slide3'></label>
+                    <label for='slide4'></label>
+                    <label for='slide5'></label>
+                </div>
+                <div id="active">
+                    <label for='slide1'></label>
+                    <label for='slide2'></label>
+                    <label for='slide3'></label>
+                    <label for='slide4'></label>
+                    <label for='slide5'></label>
+                </div>
+                </article>
+        </div>
+       
+      </div>
+      <div style="margin-left: 3%;" class="col-sm-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus possimus culpa saepe obcaecati totam officiis autem tempore magni! Deleniti aut commodi blanditiis voluptate. Expedita pariatur quidem officiis velit facere similique.</p>
+      </div>
+    </div>
+  </div>

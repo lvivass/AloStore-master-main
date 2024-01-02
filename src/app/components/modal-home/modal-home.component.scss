@@ -1,0 +1,240 @@
+
+//Modal
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--Sombra); //Sombra que sale al salir el Modal
+  }
+  
+  .modal-content {
+    background-color: red($color: #7a6969);
+    margin: 15vh auto;
+    height: 70vh;
+    padding: 20px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 4%;
+    width: 80%;
+  }
+  
+ 
+//Hace que salga el modal
+  .show {
+    display: block;
+  }
+
+
+/*Boton de cerrar*/
+.close {
+    background: var(--primary-color);
+    color: var(--light-color);
+    line-height: 25px;
+    position: absolute;
+    right: -2px;
+    text-align: center;
+    top: 1px;
+    width: 59px;
+    min-height: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0px 55px 0px 60px;
+ 
+}
+ 
+.close:hover {
+    background: var(--danger-color);
+    color:var(--light-color);
+}
+
+//Contenido del MODAL
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90% !important;
+    background-color: var(--ligth-color3);
+    border-radius: 5%;
+    box-shadow: 20px 15px 20px rgba(0, 0, 0, 0.295) !important;
+    background-image: url(../../../assets/imagenes/spikes.png);
+  }
+  
+  .offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background-color: var(--ligth-color3);
+    max-width: 600px; /* Ejemplo de ancho máximo */
+    width: 80%; /* Ejemplo de ancho relativo */
+  
+  }
+  
+  .offer p {
+    margin: 0;
+    font-size: 18px;
+    color: var(--text-normal-color);
+  }
+  
+  .offer h1 {
+    margin: 0;
+    font-size: 48px;
+    color: var(--primary-color);
+  }
+  
+  .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .image-container {
+    width: 420px;
+    margin-bottom: -116px;
+  }
+
+  //Titulo del modal
+  .text{
+    font-size: 24px;
+    font-weight:normal;
+  }
+
+
+
+  //Boton con efecto
+
+  .button2 {
+    display: inline-block;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: var(--ligth-color3);
+    color: var(--primary-color);
+    border: 1px solid var(--ligth-color3);
+    box-shadow: 6px 6px 12px #c5c5c5,
+               -6px -6px 12px #ffffff;
+  }
+  
+  .button2:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5,
+               inset -4px -4px 12px #ffffff;
+  }
+  
+  .button2:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #009087;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+  }
+  
+  .button2:hover {
+    color: #ffffff;
+    border: 1px solid #009087;
+  }
+  
+  .button2:hover:before {
+    top: -35%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+  .button2:hover:after {
+    top: -45%;
+    background-color: #009087;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+  }
+  
+
+
+
+
+//Medias query
+@media only screen and (max-width: 680px) {
+    .offer {
+      padding: 10%;
+    }
+  }
+
+@media only screen and (max-width: 686px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .modal{
+        margin-top: 20% !important;
+    }
+  
+    .offer {
+      margin-bottom: 20%;
+    }
+  }
+
+  @media only screen and (max-width: 645px) {
+    
+    .modal{
+        margin-top: 10% !important;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    
+    .modal{
+        margin-top: 10% !important;
+    }
+  }
+
+  @media only screen and (max-width: 405px) {
+    
+    .modal{
+        margin-top: 28% !important;
+    }
+  }
+
+
+
+  //prueba
+
+  

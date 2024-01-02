@@ -19,13 +19,16 @@
 
     --light-color: #f8f9fa; /* Color claro */
     --ligth-color2:#C9C9C9; /* Color claro */
+    --ligth-color3: #f7f7f7;
     --dark-color: #2b2b2b; /* Color oscuro */
 
     //background
     --bg-color:#CACACB;
     --bg-color2: #D3EE05;
- 
-   
+    
+    //Sombras
+    --Sombra:rgba(0,0,0,0.4);
+
     //Colores para los textos
     --text-normal-color: #4c4c4d;
     --text-muted-color: #adb5bd;
@@ -130,8 +133,6 @@
       transition-duration: 2s;
     }
   }
-
-  
 
 
   }

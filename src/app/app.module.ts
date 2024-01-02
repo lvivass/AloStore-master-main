@@ -17,6 +17,8 @@ import { DashboarComponent } from './pages/dashboar/dashboar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { RecoverPasswordComponent } from './pages/recover-password/recover-password.component';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
+import { ModalHomeComponent } from './components/modal-home/modal-home.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { RecoverPasswordComponent } from './pages/recover-password/recover-passw
     LoginComponent,
     RegisterComponent,
     RecoverPasswordComponent,
+    MainMenuComponent,
+    ModalHomeComponent,
   
   ],
 
