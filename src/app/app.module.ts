@@ -19,6 +19,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoverPasswordComponent } from './pages/recover-password/recover-password.component';
 import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { ModalHomeComponent } from './components/modal-home/modal-home.component';
+import { CarouselMainComponent } from './components/carousel-main/carousel-main.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { ModalHomeComponent } from './components/modal-home/modal-home.component
     RecoverPasswordComponent,
     MainMenuComponent,
     ModalHomeComponent,
+    CarouselMainComponent,
   
   ],
 
